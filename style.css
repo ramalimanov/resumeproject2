@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +11,7 @@ body {
   font-size: 14px;
   line-height: 25px;
   color: #555555;
+  margin-left: 30px;
 }
 
 .bold {
@@ -23,14 +23,14 @@ body {
 }
 
 .resume {
-  width: 800px;
+  width:50%;
   height: auto;
   display: flex;
   margin: 50px auto;
 }
 
 .resume .containerleft {
-  width: 320px;
+  width: 35%;
   background: rgb(250, 184, 61);
 }
 
@@ -111,7 +111,7 @@ body {
 
 /*Resume Right*/
 .resume .resume_right {
-  width: 520px;
+  width: 65%;
   background: #fff;
   padding: 25px 25px 25px 55px;
 }
@@ -154,7 +154,7 @@ grid-template-columns: 1fr 1fr;
 .grideducation{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 4em 5.5em 5.5em;
+  grid-template-rows: 4em 7em 7em;
   }
 
   .gridexperiences{
@@ -163,9 +163,64 @@ grid-template-columns: 1fr 1fr;
     grid-auto-rows: 5em;
     }
 
-@media screen and (max-width:480px){
-  body{
-    display: block;
+  
+
+
+
+/* Ipad Pro */
+@media all and (max-width: 1024px) {
+  .resume{
+   flex-direction: column;
+   display: flex;
+   width: 60%;
+   
+  }
+  .resume .containerleft {
+    width: 100%;
+  }
+  .resume .resume_right {
+    width: 100%;
   }
 }
+
+/*  */
+@media all and (max-width: 768px) {
+  .resume{
+   flex-direction: column;
+   display: flex;
+   width: 100%;
+   
+  }
+  .resume .containerleft {
+    width: 100%;
+  }
+  .resume .resume_right {
+    width: 90%;
+    padding: 0;
+  }
+}
+
+/*  */
+@media all and (max-width: 600px) {
+  .resume{
+   flex-direction: column;
+   display: flex;
+   width: 100%;
+   margin-left: 0;
+   
+  }
+  .resume .containerleft {
+    width: 100%;
+  }
+  .resume .resume_right {
+    width: 90%;
+  }
+  .gridexperiences{
+    grid-auto-rows: 6.5em;
+    }
+    .grideducation{
+      grid-template-rows: 5em 7em 7em;
+      }
+}
+
 
